@@ -1,6 +1,6 @@
 ### loc parser project
 
-A scrapy crawler to parse and save data.
+A scrapy crawler to parse and save data from the Library of Congress API.
 
 ### How to use:
 
@@ -22,7 +22,7 @@ images will be saved in following path:
 ```
 
 ### Future improvements
-1. Create collections parameters maping so user have to specify only collection name, like that:
+1. Create collections parameters mapping so users only have to specify the collection name, e.g.:
 ```bash
 scrapy crawl loc_collections -a "cn=copland" -a "items_limit=500"
 scrapy crawl loc_collections -a "cn=fwp" -a "items_limit=500"
@@ -30,5 +30,5 @@ scrapy crawl loc_collections -a "cn=fwp" -a "items_limit=500"
 etc.
 ```
 2. Create scalable, deployable and more robust infrastructure to parse, process and store data.
-3. Create pipeline for creating `datasets` out of parsed collections data.
-4. Use cloud storage for saving item's images and documents.
+3. Create pipeline for creating `datasets` out of parsed collections data. See https://github.com/huggingface/datasets/blob/main/templates/README_guide.md
+4. Use cloud storage to saving items, images and documents.
